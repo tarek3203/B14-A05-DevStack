@@ -7,6 +7,7 @@ import type { Technology } from "./types/technology"
 function App() {
   const [technologies, setTechnologies] = useState<Technology[]>([])
   const [loading, setLoading] = useState(true)
+  const [stack] = useState<Technology[]>([])
 
   useEffect(() => {
     fetch("/technologies.json")
@@ -19,7 +20,11 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <TechnologySection technologies={technologies} loading={loading} />
+      <TechnologySection
+        technologies={technologies}
+        loading={loading}
+        stack={stack}
+      />
     </div>
   )
 }

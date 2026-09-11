@@ -1,14 +1,17 @@
 import type { Technology } from "../types/technology"
 import TechnologyCard from "./TechnologyCard"
+import YourStack from "./YourStack"
 
 interface TechnologySectionProps {
   technologies: Technology[]
   loading: boolean
+  stack: Technology[]
 }
 
 export default function TechnologySection({
   technologies,
   loading,
+  stack,
 }: TechnologySectionProps) {
   return (
     <section id="technologies" className="mx-auto max-w-[1200px] px-4 pb-20">
@@ -25,10 +28,16 @@ export default function TechnologySection({
           <p className="text-sm text-slate-500">Loading technologies...</p>
         </div>
       ) : (
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {technologies.map((technology) => (
-            <TechnologyCard key={technology.id} technology={technology} />
-          ))}
+        <div className="mt-8 grid gap-6 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 xl:grid-cols-3">
+            {technologies.map((technology) => (
+              <TechnologyCard key={technology.id} technology={technology} />
+            ))}
+          </div>
+
+          <aside>
+            <YourStack stack={stack} />
+          </aside>
         </div>
       )}
     </section>
