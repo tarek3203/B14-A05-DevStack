@@ -7,6 +7,8 @@ interface TechnologySectionProps {
   loading: boolean
   stack: Technology[]
   onAddToStack: (technology: Technology) => void
+  onRemoveFromStack: (id: string) => void
+  onRemoveAll: () => void
 }
 
 export default function TechnologySection({
@@ -14,6 +16,8 @@ export default function TechnologySection({
   loading,
   stack,
   onAddToStack,
+  onRemoveFromStack,
+  onRemoveAll,
 }: TechnologySectionProps) {
   return (
     <section id="technologies" className="mx-auto max-w-[1200px] px-4 pb-20">
@@ -43,7 +47,11 @@ export default function TechnologySection({
           </div>
 
           <aside>
-            <YourStack stack={stack} />
+            <YourStack
+              stack={stack}
+              onRemove={onRemoveFromStack}
+              onRemoveAll={onRemoveAll}
+            />
           </aside>
         </div>
       )}

@@ -26,6 +26,14 @@ function App() {
     setStack([...stack, technology])
   }
 
+  const handleRemoveFromStack = (id: string) => {
+    setStack(stack.filter((item) => item.id !== id))
+  }
+
+  const handleRemoveAll = () => {
+    setStack([])
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -35,6 +43,8 @@ function App() {
         loading={loading}
         stack={stack}
         onAddToStack={handleAddToStack}
+        onRemoveFromStack={handleRemoveFromStack}
+        onRemoveAll={handleRemoveAll}
       />
     </div>
   )

@@ -1,10 +1,12 @@
+import { HiXMark } from "react-icons/hi2"
 import type { Technology } from "../types/technology"
 
 interface StackItemProps {
   technology: Technology
+  onRemove: (id: string) => void
 }
 
-export default function StackItem({ technology }: StackItemProps) {
+export default function StackItem({ technology, onRemove }: StackItemProps) {
   return (
     <li className="flex items-center gap-3 rounded-lg border border-slate-200 p-3">
       <img
@@ -18,6 +20,14 @@ export default function StackItem({ technology }: StackItemProps) {
         </p>
         <p className="text-[11px] text-slate-500">{technology.category}</p>
       </div>
+      <button
+        type="button"
+        aria-label={`Remove ${technology.name} from your stack`}
+        onClick={() => onRemove(technology.id)}
+        className="shrink-0 rounded p-1 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700"
+      >
+        <HiXMark size={18} />
+      </button>
     </li>
   )
 }

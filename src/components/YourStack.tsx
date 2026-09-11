@@ -3,9 +3,15 @@ import StackItem from "./StackItem"
 
 interface YourStackProps {
   stack: Technology[]
+  onRemove: (id: string) => void
+  onRemoveAll: () => void
 }
 
-export default function YourStack({ stack }: YourStackProps) {
+export default function YourStack({
+  stack,
+  onRemove,
+  onRemoveAll,
+}: YourStackProps) {
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-5 lg:sticky lg:top-20">
       <h3 className="text-base font-bold text-slate-900">Your Stack</h3>
@@ -20,14 +26,20 @@ export default function YourStack({ stack }: YourStackProps) {
       ) : (
         <ul className="mt-4 flex flex-col gap-3">
           {stack.map((technology) => (
-            <StackItem key={technology.id} technology={technology} />
+            <StackItem
+              key={technology.id}
+              technology={technology}
+              onRemove={onRemove}
+            />
           ))}
         </ul>
       )}
 
       <button
         type="button"
-        className="mt-6 w-full rounded-lg border border-red-200 px-4 py-2.5 text-sm font-semibold text-red-600 transition-colors hover:bg-red-50"
+        onClick={onRemoveAll}
+        disabled={stack.length === 0}
+        className="mt-6 w-full rounded-lg border border-red-200 px-4 py-2.5 text-sm font-semibold text-red-600 transition-colors hover:bg-red-50 disabled:cursor-not-allowed disabled:border-slate-200 disabled:text-slate-400 disabled:hover:bg-transparent"
       >
         Remove All
       </button>
