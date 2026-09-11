@@ -7,7 +7,7 @@ import type { Technology } from "./types/technology"
 function App() {
   const [technologies, setTechnologies] = useState<Technology[]>([])
   const [loading, setLoading] = useState(true)
-  const [stack] = useState<Technology[]>([])
+  const [stack, setStack] = useState<Technology[]>([])
 
   useEffect(() => {
     fetch("/technologies.json")
@@ -15,6 +15,16 @@ function App() {
       .then((data: Technology[]) => setTechnologies(data))
       .finally(() => setLoading(false))
   }, [])
+
+  const handleAddToStack = (technology: Technology) => {
+    const alreadyAdded = stack.some((item) => item.id === technology.id)
+
+    if (alreadyAdded) {
+      return
+    }
+
+    setStack([...stack, technology])
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -24,6 +34,7 @@ function App() {
         technologies={technologies}
         loading={loading}
         stack={stack}
+        onAddToStack={handleAddToStack}
       />
     </div>
   )

@@ -6,12 +6,14 @@ interface TechnologySectionProps {
   technologies: Technology[]
   loading: boolean
   stack: Technology[]
+  onAddToStack: (technology: Technology) => void
 }
 
 export default function TechnologySection({
   technologies,
   loading,
   stack,
+  onAddToStack,
 }: TechnologySectionProps) {
   return (
     <section id="technologies" className="mx-auto max-w-[1200px] px-4 pb-20">
@@ -31,7 +33,12 @@ export default function TechnologySection({
         <div className="mt-8 grid gap-6 lg:grid-cols-4">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-3 xl:grid-cols-3">
             {technologies.map((technology) => (
-              <TechnologyCard key={technology.id} technology={technology} />
+              <TechnologyCard
+                key={technology.id}
+                technology={technology}
+                isAdded={stack.some((item) => item.id === technology.id)}
+                onAdd={onAddToStack}
+              />
             ))}
           </div>
 

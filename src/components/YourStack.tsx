@@ -1,4 +1,5 @@
 import type { Technology } from "../types/technology"
+import StackItem from "./StackItem"
 
 interface YourStackProps {
   stack: Technology[]
@@ -16,7 +17,13 @@ export default function YourStack({ stack }: YourStackProps) {
         <p className="mt-6 text-xs text-slate-400">
           No technologies selected yet.
         </p>
-      ) : null}
+      ) : (
+        <ul className="mt-4 flex flex-col gap-3">
+          {stack.map((technology) => (
+            <StackItem key={technology.id} technology={technology} />
+          ))}
+        </ul>
+      )}
 
       <button
         type="button"

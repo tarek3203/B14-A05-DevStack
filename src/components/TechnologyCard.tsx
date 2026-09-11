@@ -18,9 +18,15 @@ const BADGE_STYLES: Record<string, string> = {
 
 interface TechnologyCardProps {
   technology: Technology
+  isAdded: boolean
+  onAdd: (technology: Technology) => void
 }
 
-export default function TechnologyCard({ technology }: TechnologyCardProps) {
+export default function TechnologyCard({
+  technology,
+  isAdded,
+  onAdd,
+}: TechnologyCardProps) {
   const { name, category, description, icon, rating, difficulty, badge } =
     technology
 
@@ -58,9 +64,15 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
 
       <button
         type="button"
-        className="mt-4 w-full rounded-lg bg-ink px-4 py-2.5 text-xs font-medium text-white transition-opacity hover:opacity-90"
+        onClick={() => onAdd(technology)}
+        disabled={isAdded}
+        className={`mt-4 w-full rounded-lg px-4 py-2.5 text-xs font-medium transition-opacity ${
+          isAdded
+            ? "cursor-not-allowed bg-slate-200 text-slate-500"
+            : "bg-ink text-white hover:opacity-90"
+        }`}
       >
-        Add to Stack
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </article>
   )
