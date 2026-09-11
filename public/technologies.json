@@ -4,7 +4,7 @@
     "name": "React",
     "category": "Frontend",
     "description": "A declarative, component-based JavaScript library for building modern user interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "icon": "/icons/react.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -14,7 +14,7 @@
     "name": "Vue.js",
     "category": "Frontend",
     "description": "An approachable, performant, and versatile framework for building web user interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
+    "icon": "/icons/vue.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Versatile"
@@ -24,7 +24,7 @@
     "name": "Svelte",
     "category": "Frontend",
     "description": "Cybernetically enhanced web apps with compile-time reactivity and zero virtual DOM overhead.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Svelte.svg",
+    "icon": "/icons/svelte.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Fast"
@@ -34,7 +34,7 @@
     "name": "Next.js",
     "category": "Frontend",
     "description": "The React framework for full-stack web applications with hybrid static and server rendering.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+    "icon": "/icons/nextjs.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "SSR / Edge"
@@ -44,7 +44,7 @@
     "name": "Node.js",
     "category": "Backend",
     "description": "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+    "icon": "/icons/nodejs.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Standard"
@@ -54,7 +54,7 @@
     "name": "PostgreSQL",
     "category": "Database",
     "description": "A powerful, open-source object-relational database system with proven reliability.",
-    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "icon": "/icons/postgresql.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Top SQL"
@@ -64,7 +64,7 @@
     "name": "Redis",
     "category": "Database",
     "description": "In-memory data structure store used as a high-speed database, cache, and message broker.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Redis.svg",
+    "icon": "/icons/redis.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Cache"
@@ -74,7 +74,7 @@
     "name": "JavaScript",
     "category": "Language",
     "description": "The versatile, ubiquitous scripting language powering dynamic behavior across the web.",
-    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "icon": "/icons/javascript.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Ubiquitous"
@@ -84,7 +84,7 @@
     "name": "TypeScript",
     "category": "Language",
     "description": "A strongly typed programming language that builds on JavaScript for robust tooling.",
-    "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "icon": "/icons/typescript.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Essential"
@@ -94,7 +94,7 @@
     "name": "Java",
     "category": "Language",
     "description": "A secure, object-oriented programming language designed for portability and scale.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Java.svg",
+    "icon": "/icons/java.svg",
     "rating": 4.6,
     "difficulty": "Intermediate",
     "badge": "Robust"
@@ -104,7 +104,7 @@
     "name": "Tailwind CSS",
     "category": "Styling",
     "description": "A utility-first CSS framework packed with classes that can be composed to build custom UI.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "icon": "/icons/tailwind.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Modern"
@@ -114,7 +114,7 @@
     "name": "Docker",
     "category": "DevOps",
     "description": "A platform designed to build, share, and run containerized applications reliably.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    "icon": "/icons/docker.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
     "badge": "Containers"
@@ -124,7 +124,7 @@
     "name": "Git",
     "category": "Tools",
     "description": "A distributed version control system that tracks every change across a project's history.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "icon": "/icons/git.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
@@ -134,7 +134,7 @@
     "name": "Vite",
     "category": "Tools",
     "description": "A next-generation build tool offering instant dev server start and fast hot module replacement.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Vite.js.svg",
+    "icon": "/icons/vite.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Fast"
