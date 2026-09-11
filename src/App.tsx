@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/ReactToastify.css"
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import TechnologySection from "./components/TechnologySection"
@@ -54,6 +55,7 @@ function App() {
         onRemoveFromStack={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+      <Footer />
       <ToastContainer position="top-right" autoClose={2500} theme="light" />
     </div>
   )
