@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/ReactToastify.css"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import TechnologySection from "./components/TechnologySection"
@@ -20,18 +22,24 @@ function App() {
     const alreadyAdded = stack.some((item) => item.id === technology.id)
 
     if (alreadyAdded) {
+      toast.warning(`${technology.name} is already in your stack.`)
       return
     }
 
     setStack([...stack, technology])
+    toast.success(`${technology.name} added to your stack.`)
   }
 
   const handleRemoveFromStack = (id: string) => {
+    const removed = stack.find((item) => item.id === id)
+
     setStack(stack.filter((item) => item.id !== id))
+    toast.info(`${removed?.name} removed from your stack.`)
   }
 
   const handleRemoveAll = () => {
     setStack([])
+    toast.info("All technologies removed from your stack.")
   }
 
   return (
@@ -46,6 +54,7 @@ function App() {
         onRemoveFromStack={handleRemoveFromStack}
         onRemoveAll={handleRemoveAll}
       />
+      <ToastContainer position="top-right" autoClose={2500} theme="light" />
     </div>
   )
 }
