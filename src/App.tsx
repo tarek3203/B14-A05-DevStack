@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
-    <h1 className="brand-gradient-text p-10 text-6xl font-extrabold tracking-tight">
-      Dev Stack
-    </h1>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <div className="h-[1200px]" />
+    </div>
   )
 }
 
