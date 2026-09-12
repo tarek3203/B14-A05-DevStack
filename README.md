@@ -4,7 +4,7 @@ Dev Stack is a technology picker for developers. You browse frontend, backend,
 database, styling, DevOps and tooling options, compare them side by side, and
 add the ones you like into your own stack panel.
 
-**Live site:** _(add link after deploy)_
+**Live site:** https://b14-a05-devstack-tariq.netlify.app/
 
 ## Technology used
 
