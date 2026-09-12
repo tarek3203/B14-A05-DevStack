@@ -17,11 +17,11 @@ add the ones you like into your own stack panel.
 
 ## Features
 
-1. **Build your own stack** — add any technology to the Your Stack panel, remove
+1. **Build your own stack.** Add any technology to the Your Stack panel, remove
    one with the ✕ button, or clear everything with Remove All.
-2. **No duplicates** — once a technology is added, its button is disabled and
+2. **No duplicates.** Once a technology is added, its button is disabled and
    reads "✓ Added to Stack", so the same one cannot go in twice.
-3. **Fully responsive** — one column on mobile, two on tablet, three plus the
+3. **Fully responsive.** One column on mobile, two on tablet, three plus the
    stack sidebar on desktop, with a hamburger menu on small screens.
 
 ## Run it locally
@@ -37,7 +37,7 @@ npm run dev
 
 **1. What is JSX, and why is it used in React?**
 
-JSX lets me write HTML-looking markup inside JavaScript. It is not real HTML —
+JSX lets me write HTML-looking markup inside JavaScript. It is not real HTML,
 the build tool turns it into `React.createElement()` calls. I use it because
 describing the UI as markup is much easier to read than writing nested function
 calls by hand.
@@ -52,14 +52,14 @@ the component itself and can change. In my project `stack` is state inside
 
 `useState` gives a component a value that survives re-renders, plus a setter
 function. When I call the setter React re-renders with the new value. I used it
-three times in `App.tsx` — `technologies` for the loaded data, `loading` for the
+three times in `App.tsx`, `technologies` for the loaded data, `loading` for the
 spinner, and `stack` for the selected technologies. I also used it in `Navbar`
 for opening and closing the mobile menu.
 
 **4. What does the `useEffect` hook do, and why did you need it to load the JSON data?**
 
 `useEffect` runs code after the component renders, for things that are not
-rendering — like fetching data. I needed it because I cannot call `fetch`
+rendering, like fetching data. I needed it because I cannot call `fetch`
 directly in the component body; that would run on every single render and loop
 forever. I passed an empty dependency array `[]` so the fetch happens only once,
 right after the first render.
@@ -74,7 +74,7 @@ Using the array index would break as soon as items are removed from the list.
 **6. What is conditional rendering? Show one place you used it.**
 
 Conditional rendering means showing different JSX depending on a condition. In
-`YourStack.tsx` I check `stack.length === 0` — if the stack is empty I show
+`YourStack.tsx` I check `stack.length === 0`, if the stack is empty I show
 "No technologies selected yet.", otherwise I render the list of stack items.
 
 **7. How do you pass data from a parent to a child, and how does a child send something back?**

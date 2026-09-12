@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between gap-3 px-4">
-        {/* Left — hamburger on mobile, brand on desktop */}
+        {/* hamburger on mobile, brand on desktop */}
         <div className="flex flex-1 items-center lg:flex-none">
           <button
             type="button"
@@ -27,7 +27,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Center — brand on mobile, links on desktop */}
+        {/* brand sits in the middle on mobile */}
         <div className="lg:hidden">
           <Brand size="sm" />
         </div>
@@ -48,7 +48,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right — auth buttons */}
+        {/* auth buttons */}
         <div className="flex flex-1 items-center justify-end gap-2 lg:flex-none lg:gap-4">
           <button
             type="button"
